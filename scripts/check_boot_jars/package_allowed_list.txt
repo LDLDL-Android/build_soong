@@ -230,6 +230,7 @@ com\.nothing
 com\.nothing\..*
 
 # OPLUS adds
+com\.oppo\..*
 com\.oplus\..*
 net\.oneplus\..*
 oplus\..*
