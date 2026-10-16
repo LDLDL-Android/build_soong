@@ -102,6 +102,9 @@ var (
 		"exynos-m2": []string{
 			"-mcpu=exynos-m2",
 		},
+		"oryon": []string{
+			"-mcpu=oryon-1",
+		},
 	}
 )
 
@@ -135,6 +138,7 @@ func init() {
 	pctx.StaticVariable("Arm64Kryo385Cflags", strings.Join(arm64CpuVariantCflags["kryo385"], " "))
 	pctx.StaticVariable("Arm64ExynosM1Cflags", strings.Join(arm64CpuVariantCflags["exynos-m1"], " "))
 	pctx.StaticVariable("Arm64ExynosM2Cflags", strings.Join(arm64CpuVariantCflags["exynos-m2"], " "))
+	pctx.StaticVariable("Arm64OryonCflags", strings.Join(arm64CpuVariantCflags["oryon"], " "))
 
 	pctx.StaticVariable("Arm64FixCortexA53Ldflags", "-Wl,--fix-cortex-a53-843419")
 }
@@ -152,6 +156,7 @@ var (
 		"kryo385":    "${config.Arm64Kryo385Cflags}",
 		"exynos-m1":  "${config.Arm64ExynosM1Cflags}",
 		"exynos-m2":  "${config.Arm64ExynosM2Cflags}",
+		"oryon":      "${config.Arm64OryonCflags}",
 	}
 
 	arm64CpuVariantLdflags = map[string]string{
